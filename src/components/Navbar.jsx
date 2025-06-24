@@ -30,7 +30,7 @@ const Navbar = () => {
     };
   }, [isMobileMenuOpen]);
 
-  const menuItems = ["About", "Menu", "Reviews", "Contact us"];
+  const menuItems = ["About", "Menu", "Reviews", "Contact"];
 
   return (
     <>
