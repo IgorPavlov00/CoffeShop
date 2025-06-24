@@ -279,19 +279,19 @@ const Hero = () => {
                   transition={{ duration: 0.5 }}
                 >
                   <div className="grid grid-cols-3 gap-3 w-full">
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center mr-5">
                       <FaCoffee className="w-6 h-6 text-amber-400 mb-1" />
                       <span className="text-xs text-white/70 text-center">
                         Fresh
                       </span>
                     </div>
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center ml-1">
                       <FaWifi className="w-6 h-6 text-blue-400 mb-1" />
                       <span className="text-xs text-white/70 text-center">
                         WiFi
                       </span>
                     </div>
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center ml-3">
                       <FaHeart className="w-6 h-6 text-rose-400 mb-1" />
                       <span className="text-xs text-white/70 text-center">
                         Love
