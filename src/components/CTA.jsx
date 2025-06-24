@@ -47,7 +47,10 @@ const CTA = () => {
   };
 
   return (
-    <section className="relative py-20 sm:py-24 md:py-32 bg-gradient-to-br from-amber-900 via-orange-900 to-yellow-800 overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-20 sm:py-24 md:py-32 bg-gradient-to-br from-amber-900 via-orange-900 to-yellow-800 overflow-hidden"
+    >
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -93,7 +96,7 @@ const CTA = () => {
       </motion.div>
 
       {/* Main Content */}
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-20 scale-[0.95] lg:scale-[0.9] xl:scale-[0.90] transition-all duration-500">
         <motion.div
           initial="hidden"
           whileInView="visible"

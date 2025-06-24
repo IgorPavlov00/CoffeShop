@@ -122,7 +122,7 @@ const Features = () => {
 
   return (
     <section
-      id="features"
+      id="about"
       className="relative bg-gradient-to-b from-orange-900 via-amber-900 to-slate-900 overflow-hidden"
       onMouseMove={handleMouseMove}
     >
@@ -162,7 +162,7 @@ const Features = () => {
         <div className="absolute top-2/3 left-1/4 w-32 h-32 bg-gradient-to-br from-emerald-500/25 to-teal-500/25 rounded-full blur-3xl" />
       </motion.div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 py-20">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 xl:px-20 py-24 scale-[0.95] lg:scale-[0.9] xl:scale-[0.85] transition-all duration-500">
         <motion.div
           initial="hidden"
           whileInView="visible"

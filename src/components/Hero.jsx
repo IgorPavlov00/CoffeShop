@@ -87,7 +87,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-orange-900 overflow-hidden">
+    <section className="relative min-h-screen bg-gradient-to-br from-slate-900 via-amber-900 to-orange-900 overflow-hidden ">
       {/* Modern Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(120,119,198,0.3)_0%,_transparent_50%)]" />
@@ -97,7 +97,7 @@ const Hero = () => {
 
       {/* Floating Modern Elements */}
       <motion.div
-        className="absolute top-20 left-10 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60"
+        className="absolute top-30 left-10 w-4 h-4 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full opacity-60"
         variants={floatingVariants}
         animate="animate"
       />
@@ -129,9 +129,9 @@ const Hero = () => {
       {/* Parallax Content Container */}
       <motion.div
         style={{ y: isMobile ? mobileY : y }}
-        className="relative z-10 min-h-screen flex items-center"
+        className="relative z-10 min-h-screen flex items-center pt-24"
       >
-        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 xl:px-12">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 xl:px-12 lg:scale-[0.9] lg:origin-top">
           <motion.div
             className="grid items-center grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 py-20 lg:py-0"
             variants={containerVariants}

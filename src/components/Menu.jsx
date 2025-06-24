@@ -117,10 +117,7 @@ const Menu = () => {
   ];
 
   return (
-    <section
-      id="menu"
-      className="relative py-20 sm:py-24 md:py-32 bg-gradient-to-br from-amber-50 via-orange-50 to-yellow-50 overflow-hidden"
-    >
+    <section id="menu" className="scroll-mt-24 relative pt-8 pb-12">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div
@@ -159,30 +156,30 @@ const Menu = () => {
         <FaLeaf className="w-3 h-3 sm:w-5 sm:h-5 text-white" />
       </motion.div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-20 scale-[0.95] lg:scale-[0.9] xl:scale-[0.95] transition-all duration-500">
         <motion.div
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.1, margin: "0px 0px -200px 0px" }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={containerVariants}
         >
           {/* Section Header */}
           <motion.div
             variants={itemVariants}
-            className="text-center mb-12 sm:mb-16 md:mb-20"
+            className="text-center mb-8 sm:mb-12"
           >
-            <motion.div className="inline-flex items-center px-4 py-3 sm:px-6 sm:py-3 rounded-full bg-amber-500/20 backdrop-blur-sm border border-amber-400/30 shadow-lg mb-6">
+            <motion.div className="inline-flex items-center px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-amber-500/20 backdrop-blur-sm border border-amber-400/30 shadow-lg mb-4">
               <FaUtensils className="w-4 h-4 sm:w-5 sm:h-5 text-amber-600 mr-3" />
               <span className="text-amber-800 text-sm sm:text-base font-semibold tracking-wider uppercase">
                 Kombinat Menu
               </span>
             </motion.div>
 
-            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-800 via-orange-700 to-yellow-700 leading-tight mb-6 drop-shadow-lg">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-800 via-orange-700 to-yellow-700 leading-tight mb-4 drop-shadow-lg">
               Our Favorites
             </h2>
 
-            <p className="text-lg sm:text-xl md:text-2xl text-amber-800/80 max-w-3xl mx-auto leading-relaxed font-light">
+            <p className="text-lg sm:text-xl text-amber-800/80 max-w-3xl mx-auto leading-relaxed font-light">
               Carefully crafted dishes and expertly brewed beverages, made with{" "}
               <span className="text-amber-700 font-semibold">
                 fresh ingredients
@@ -198,7 +195,7 @@ const Menu = () => {
           {/* Filter Buttons */}
           <motion.div
             variants={itemVariants}
-            className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-12 sm:mb-16"
+            className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-8 sm:mb-12"
           >
             {filterButtons.map(({ key, label, icon: IconComponent }) => (
               <motion.button
@@ -231,7 +228,7 @@ const Menu = () => {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-10"
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8"
             >
               {filteredItems.map((item, index) => (
                 <motion.div
@@ -307,7 +304,7 @@ const Menu = () => {
           {/* Bottom CTA */}
           <motion.div
             variants={itemVariants}
-            className="text-center mt-12 sm:mt-16 md:mt-20"
+            className="text-center mt-8 sm:mt-12"
           >
             <motion.button
               whileHover={{

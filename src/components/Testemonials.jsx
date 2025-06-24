@@ -79,7 +79,10 @@ const TestimonialsCarousel = () => {
   };
 
   return (
-    <section className="relative py-20 bg-gradient-to-b from-slate-900 via-amber-900 to-orange-900 overflow-hidden">
+    <section
+      id="reviews"
+      className="relative py-20 bg-gradient-to-b from-slate-900 via-amber-900 to-orange-900 overflow-hidden"
+    >
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,_rgba(120,119,198,0.3)_0%,_transparent_50%)]" />
@@ -99,7 +102,7 @@ const TestimonialsCarousel = () => {
         transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       />
 
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20 py-20 scale-[0.95] lg:scale-[0.9] xl:scale-[0.95] transition-all duration-500">
         {/* Header */}
         <motion.div
           className="text-center mb-16"

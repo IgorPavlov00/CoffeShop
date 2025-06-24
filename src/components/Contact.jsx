@@ -79,7 +79,7 @@ const StickyContactButton = () => {
     <>
       {/* Sticky Contact Button */}
       <motion.div
-        className="fixed bottom-6 right-6 z-50"
+        className="fixed bottom-4 right-4 z-50"
         initial={{ scale: 0, rotate: -180 }}
         animate={{ scale: 1, rotate: 0 }}
         transition={{
@@ -94,7 +94,7 @@ const StickyContactButton = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="absolute bottom-16 right-0 space-y-3"
+              className="absolute bottom-14 right-0 space-y-2"
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0 }}
@@ -107,7 +107,7 @@ const StickyContactButton = () => {
                   <motion.button
                     key={option.label}
                     onClick={option.action}
-                    className={`group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 bg-gradient-to-r ${option.color} text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden`}
+                    className={`group flex items-center justify-center w-11 h-11 md:w-12 md:h-12 bg-gradient-to-r ${option.color} text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden`}
                     whileHover={{ scale: 1.1, x: -5 }}
                     whileTap={{ scale: 0.95 }}
                     initial={{ opacity: 0, x: 20 }}
@@ -115,11 +115,11 @@ const StickyContactButton = () => {
                     transition={{ delay: index * 0.1 }}
                     style={{ zIndex: 9999 }}
                   >
-                    <IconComponent className="w-5 h-5 md:w-6 md:h-6" />
+                    <IconComponent className="w-4 h-4 md:w-5 md:h-5" />
 
                     {/* Tooltip - Enhanced for desktop */}
                     <motion.div
-                      className="absolute right-16 md:right-18 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+                      className="absolute right-14 md:right-16 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-sm px-3 py-2 rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                       initial={{ x: 10 }}
                       whileHover={{ x: 0 }}
                       style={{ zIndex: 10000 }}
@@ -137,7 +137,7 @@ const StickyContactButton = () => {
         {/* Main Toggle Button - Enhanced for desktop */}
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className="w-14 h-14 md:w-16 md:h-16 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center relative overflow-hidden"
+          className="w-12 h-12 md:w-14 md:h-14 bg-gradient-to-r from-amber-500 to-orange-600 text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center relative overflow-hidden"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           animate={{ rotate: isOpen ? 45 : 0 }}
@@ -150,9 +150,9 @@ const StickyContactButton = () => {
             className="relative z-10"
           >
             {isOpen ? (
-              <FaTimes className="w-6 h-6 md:w-7 md:h-7" />
+              <FaTimes className="w-5 h-5 md:w-6 md:h-6" />
             ) : (
-              <span className="text-2xl md:text-3xl">💬</span>
+              <span className="text-xl md:text-2xl">💬</span>
             )}
           </motion.div>
         </motion.button>
@@ -179,23 +179,23 @@ const StickyContactButton = () => {
             onClick={() => setShowFAQ(false)}
           >
             <motion.div
-              className="bg-white rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-y-auto p-6 relative"
+              className="bg-white rounded-2xl max-w-lg w-full max-h-[70vh] overflow-y-auto p-4 relative"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
-              <div className="flex items-center justify-between mb-6">
+              <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center">
-                  <div className="w-12 h-12 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center mr-4">
-                    <FaQuestionCircle className="w-6 h-6 text-white" />
+                  <div className="w-8 h-8 bg-gradient-to-r from-amber-500 to-orange-600 rounded-full flex items-center justify-center mr-2">
+                    <FaQuestionCircle className="w-4 h-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold text-gray-800">
+                    <h3 className="text-lg font-bold text-gray-800">
                       Frequently Asked Questions
                     </h3>
-                    <p className="text-gray-600">
+                    <p className="text-gray-600 text-xs">
                       Quick answers to common questions
                     </p>
                   </div>
@@ -203,29 +203,29 @@ const StickyContactButton = () => {
 
                 <button
                   onClick={() => setShowFAQ(false)}
-                  className="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors duration-200"
+                  className="w-6 h-6 bg-gray-100 rounded-full flex items-center justify-center hover:bg-gray-200 transition-colors duration-200"
                 >
-                  <FaTimes className="w-4 h-4 text-gray-600" />
+                  <FaTimes className="w-3 h-3 text-gray-600" />
                 </button>
               </div>
 
               {/* FAQ Items */}
-              <div className="space-y-4">
+              <div className="space-y-2">
                 {faqItems.map((item, index) => (
                   <motion.div
                     key={index}
-                    className="border border-gray-200 rounded-2xl p-4 hover:border-amber-300 transition-colors duration-300"
+                    className="border border-gray-200 rounded-xl p-2 hover:border-amber-300 transition-colors duration-300"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <h4 className="font-semibold text-gray-800 mb-2 flex items-center">
-                      <span className="w-6 h-6 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 text-sm font-bold mr-3">
+                    <h4 className="font-semibold text-gray-800 mb-1 flex items-center text-sm">
+                      <span className="w-4 h-4 bg-amber-100 rounded-full flex items-center justify-center text-amber-600 text-xs font-bold mr-2">
                         {index + 1}
                       </span>
                       {item.question}
                     </h4>
-                    <p className="text-gray-600 leading-relaxed ml-9">
+                    <p className="text-gray-600 leading-snug ml-6 text-xs">
                       {item.answer}
                     </p>
                   </motion.div>
@@ -233,11 +233,11 @@ const StickyContactButton = () => {
               </div>
 
               {/* Footer */}
-              <div className="mt-8 p-4 bg-gradient-to-r from-amber-50 to-orange-50 rounded-2xl">
-                <p className="text-center text-gray-700 mb-4">
+              <div className="mt-4 p-2 bg-gradient-to-r from-amber-50 to-orange-50 rounded-xl">
+                <p className="text-center text-gray-700 mb-2 text-xs">
                   <strong>Still have questions?</strong> We'd love to help!
                 </p>
-                <div className="flex flex-wrap justify-center gap-3">
+                <div className="flex flex-wrap justify-center gap-2">
                   <button
                     onClick={() => {
                       setShowFAQ(false);
@@ -246,9 +246,9 @@ const StickyContactButton = () => {
                         "_blank"
                       );
                     }}
-                    className="flex items-center px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors duration-200"
+                    className="flex items-center px-2 py-1 bg-green-500 text-white rounded-full hover:bg-green-600 transition-colors duration-200 text-xs"
                   >
-                    <FaWhatsapp className="w-4 h-4 mr-2" />
+                    <FaWhatsapp className="w-3 h-3 mr-1" />
                     WhatsApp Us
                   </button>
                   <button
@@ -256,9 +256,9 @@ const StickyContactButton = () => {
                       setShowFAQ(false);
                       window.open("tel:+381641234567", "_self");
                     }}
-                    className="flex items-center px-4 py-2 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors duration-200"
+                    className="flex items-center px-2 py-1 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors duration-200 text-xs"
                   >
-                    <FaPhone className="w-4 h-4 mr-2" />
+                    <FaPhone className="w-3 h-3 mr-1" />
                     Call Us
                   </button>
                 </div>
